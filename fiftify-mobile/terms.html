@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — Fiftify Mobile</title>
     <meta name="apple-mobile-web-app-title" content="Fiftify">
-    <link rel="icon" type="image/x-icon" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/favicon.svg">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -17,16 +17,26 @@
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
-    <nav class="border-b border-gray-200 bg-white">
-        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
             <a href="/" class="flex items-center gap-2">
-                <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-7">
-                <span class="text-gray-400 font-normal">Mobile</span>
+                <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-8">
+                <span class="text-gray-400 font-normal text-lg">Mobile</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">
+                <a href="/" class="hover:text-blue-500 transition">Home</a>
+                <a href="privacy.html" class="hover:text-blue-500 transition">Privacy Policy</a>
+                <a href="https://fiftify.com/" target="_blank" rel="noopener" class="hover:text-blue-500 transition">fiftify.com</a>
+            </div>
+            <a href="https://fiftify.com/"
+               target="_blank" rel="noopener"
+               class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
+                Get Started
             </a>
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-4 py-12">
+    <main class="max-w-3xl mx-auto px-4 py-12 pt-28">
         <h1 class="text-3xl font-bold mb-2">Terms of Service</h1>
         <p class="text-gray-500 text-sm mb-10">Last updated: March 7, 2026</p>
 
