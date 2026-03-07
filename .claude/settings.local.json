@@ -3,7 +3,11 @@
     "allow": [
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
       "mcp__plugin_playwright_playwright__browser_click",
-      "mcp__plugin_playwright_playwright__browser_navigate"
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Read(//c/projects/fiftify/app/packages/shared/design-tokens/**)",
+      "Read(//c/projects/fiftify/app/packages/mobile/**)",
+      "Read(//c/projects/fiftify/app/packages/shared/**)",
+      "WebFetch(domain:fiftify.com)"
     ]
   }
 }
