@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiftify Mobile — Inventory & Orders On the Go</title>
+    <meta name="description" content="Manage orders, track purchase orders, and monitor inventory from your phone. The Fiftify mobile companion for e-commerce sellers.">
+    <meta property="og:title" content="Fiftify Mobile — Inventory & Orders On the Go">
+    <meta property="og:description" content="Manage orders, track purchase orders, and monitor inventory from your phone. The Fiftify mobile companion for e-commerce sellers.">
+    <meta property="og:url" content="https://mobile.fiftify.com/">
+    <meta property="og:image" content="https://fiftify.com/wp-content/uploads/2025/03/fiftify-logo-1200.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fiftify Mobile — Inventory & Orders On the Go">
+    <meta name="twitter:description" content="Manage orders, track purchase orders, and monitor inventory from your phone.">
+    <meta name="twitter:image" content="https://fiftify.com/wp-content/uploads/2025/03/fiftify-logo-1200.png">
+    <meta name="theme-color" content="#18181B">
+    <meta name="apple-mobile-web-app-title" content="Fiftify">
+    <link rel="icon" type="image/x-icon" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/web-app-manifest-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="https://fiftify.com/wp-content/themes/fiftify/assets/favicon/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#EFF6FF',
+                            100: '#DBEAFE',
+                            200: '#BFDBFE',
+                            300: '#93C5FD',
+                            400: '#60A5FA',
+                            500: '#3B82F6',
+                            600: '#2563EB',
+                            700: '#1D4ED8',
+                            800: '#1E40AF',
+                            900: '#1E3A8A',
+                        },
+                        dark: {
+                            50: '#FAFAFA',
+                            100: '#F4F4F5',
+                            200: '#E4E4E7',
+                            300: '#D4D4D8',
+                            400: '#A1A1AA',
+                            500: '#71717A',
+                            600: '#52525B',
+                            700: '#3F3F46',
+                            800: '#27272A',
+                            900: '#18181B',
+                            950: '#09090B',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    </style>
+</head>
+<body class="bg-white text-dark-900 antialiased font-sans">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-dark-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-8">
+                <span class="text-dark-400 font-normal text-lg">Mobile</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-dark-500">
+                <a href="#features" class="hover:text-brand-500 transition">Features</a>
+                <a href="#how-it-works" class="hover:text-brand-500 transition">How It Works</a>
+                <a href="https://fiftify.com/" target="_blank" rel="noopener" class="hover:text-brand-500 transition">fiftify.com</a>
+            </div>
+            <a href="https://fiftify.com/"
+               target="_blank" rel="noopener"
+               class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
+                Get Started
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-b from-dark-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-600 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+                    <span class="w-2 h-2 bg-brand-500 rounded-full animate-pulse"></span>
+                    Coming soon to App Store & Google Play
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark-900 leading-tight mb-6">
+                    Your Inventory<br>& Orders.
+                    <span class="text-brand-500">Anywhere.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-dark-500 mb-10 leading-relaxed max-w-xl mx-auto">
+                    Track orders, manage purchase orders, and stay on top of your inventory — all from your phone. The mobile companion for Fiftify.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://fiftify.com/"
+                       target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 bg-dark-900 hover:bg-dark-800 text-white px-8 py-4 rounded-xl font-semibold text-base transition shadow-lg shadow-dark-900/10">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                        Join the Waitlist
+                    </a>
+                    <a href="https://fiftify.com/"
+                       target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-2 text-dark-500 hover:text-brand-500 px-4 py-4 font-medium text-base transition">
+                        Learn more about Fiftify
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 md:py-28">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark-900 mb-4">Everything at Your Fingertips</h2>
+                <p class="text-dark-500 text-lg max-w-xl mx-auto">Manage your e-commerce operations without being tied to a desk.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- Order Management -->
+                <div class="bg-dark-50 rounded-2xl p-8 border border-dark-200 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-500/5 transition-all">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-dark-900">Order Management</h3>
+                    <p class="text-dark-500 leading-relaxed">Monitor and manage all your sales orders in one place. View order details, track statuses, and stay on top of fulfillment — right from your pocket.</p>
+                </div>
+
+                <!-- Purchase Orders -->
+                <div class="bg-dark-50 rounded-2xl p-8 border border-dark-200 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-500/5 transition-all">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-dark-900">Purchase Orders</h3>
+                    <p class="text-dark-500 leading-relaxed">Track supplier purchase orders, monitor received vs. ordered quantities, and ensure your restocking is always on schedule.</p>
+                </div>
+
+                <!-- Real-time Inventory -->
+                <div class="bg-dark-50 rounded-2xl p-8 border border-dark-200 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-500/5 transition-all">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-dark-900">Inventory Overview</h3>
+                    <p class="text-dark-500 leading-relaxed">Get real-time visibility into stock levels across your warehouse. See what's in stock, what's running low, and make informed decisions on the go.</p>
+                </div>
+
+                <!-- Secure & Synced -->
+                <div class="bg-dark-50 rounded-2xl p-8 border border-dark-200 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-500/5 transition-all">
+                    <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 text-dark-900">Secure & Always Synced</h3>
+                    <p class="text-dark-500 leading-relaxed">Your data is encrypted and synced with your Fiftify account in real time. Secure authentication keeps your business data protected.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 md:py-28 bg-dark-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
+                <p class="text-dark-400 text-lg">Three steps to mobile inventory management.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-brand-500 text-white flex items-center justify-center text-xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="font-bold text-lg mb-3">Sign Up on Fiftify</h3>
+                    <p class="text-dark-400 text-sm leading-relaxed">Create your account at fiftify.com and connect your e-commerce store.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-brand-500 text-white flex items-center justify-center text-xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="font-bold text-lg mb-3">Download the App</h3>
+                    <p class="text-dark-400 text-sm leading-relaxed">Get the Fiftify mobile app and log in with your existing account credentials.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-brand-500 text-white flex items-center justify-center text-xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="font-bold text-lg mb-3">Manage On the Go</h3>
+                    <p class="text-dark-400 text-sm leading-relaxed">View orders, track purchase orders, and monitor inventory from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="bg-gradient-to-br from-brand-500 to-brand-700 rounded-3xl p-12 md:p-16 shadow-2xl shadow-brand-500/20">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to Go Mobile?</h2>
+                <p class="text-brand-100 text-lg mb-8 max-w-lg mx-auto">Join the waitlist and be the first to know when the Fiftify mobile app launches.</p>
+                <a href="https://fiftify.com/"
+                   target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 bg-white hover:bg-brand-50 text-dark-900 px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl">
+                    Join the Waitlist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-50 border-t border-dark-200 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-6">
+                    <span class="text-dark-400 text-sm ml-1">
+                        <a href="https://fiftify.com/" target="_blank" rel="noopener" class="hover:text-brand-500 transition">fiftify.com</a>
+                    </span>
+                </div>
+                <div class="flex gap-6 text-sm text-dark-500">
+                    <a href="terms.html" class="hover:text-brand-500 transition">Terms of Service</a>
+                    <a href="privacy.html" class="hover:text-brand-500 transition">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-xs text-dark-400">
+                &copy; 2025 Fiftify Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

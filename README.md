@@ -6,10 +6,14 @@ Monorepo for Fiftify mobile app landing pages. Each app is a separate folder wit
 
 ```
 app-landings/
-├── unboxity/
-│   ├── index.html        ← landing page
-│   ├── terms.html        ← Terms of Service
-│   └── privacy.html      ← Privacy Policy
+├── unboxity/              ← unboxity.fiftify.com
+│   ├── index.html
+│   ├── terms.html
+│   └── privacy.html
+├── fiftify-mobile/        ← mobile.fiftify.com
+│   ├── index.html
+│   ├── terms.html
+│   └── privacy.html
 └── ...
 ```
 
