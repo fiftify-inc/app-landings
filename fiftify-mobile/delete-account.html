@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account — Fiftify Mobile</title>
+    <meta name="apple-mobile-web-app-title" content="Fiftify">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2">
+                <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-8">
+                <span class="text-gray-400 font-normal text-lg">Mobile</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500">
+                <a href="/" class="hover:text-blue-500 transition">Home</a>
+                <a href="privacy.html" class="hover:text-blue-500 transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-blue-500 transition">Terms of Service</a>
+            </div>
+            <a href="https://fiftify.com/"
+               target="_blank" rel="noopener"
+               class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
+                Get Started
+            </a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4 py-12 pt-28">
+        <h1 class="text-3xl font-bold mb-2">Delete Your Account</h1>
+        <p class="text-gray-500 text-sm mb-10">Account deletion request process</p>
+
+        <div class="prose prose-gray max-w-none space-y-8 text-[15px] leading-relaxed">
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3">How to Request Account Deletion</h2>
+                <p>To request the deletion of your Fiftify account and all associated data, please send an email to:</p>
+                <p class="my-4">
+                    <a href="mailto:support@fiftify.com" class="text-blue-500 hover:text-blue-600 font-semibold text-lg">support@fiftify.com</a>
+                </p>
+                <p>Include the following in your request:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>The email address associated with your Fiftify account</li>
+                    <li>Subject line: <strong>"Account Deletion Request"</strong></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3">What Gets Deleted</h2>
+                <p>Upon processing your request, we will permanently delete:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Your account credentials and profile information</li>
+                    <li>Push notification tokens and device associations</li>
+                    <li>Any cached business data on our servers related to your mobile app usage</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3">Processing Time</h2>
+                <p>Account deletion requests are processed within <strong>30 days</strong> of receiving your email. You will receive a confirmation once your account has been deleted.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3">Important Notes</h2>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li>Account deletion is <strong>permanent and cannot be reversed</strong></li>
+                    <li>You will lose access to the Fiftify mobile app immediately after deletion</li>
+                    <li>We may retain certain data as required by law or for legitimate business purposes (e.g., transaction records for tax compliance), as described in our <a href="privacy.html" class="text-blue-500 hover:text-blue-600">Privacy Policy</a></li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-200 mt-16 py-8 text-center text-sm text-gray-400">
+        <div class="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span>&copy; 2025 Fiftify Inc.</span>
+            <div class="flex gap-4">
+                <a href="/" class="hover:text-gray-900 transition">Home</a>
+                <a href="privacy.html" class="hover:text-gray-900 transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-gray-900 transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
