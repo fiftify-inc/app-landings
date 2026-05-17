@@ -1,0 +1,16 @@
+<svg width="640" height="280" viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg">
+  <title>Bovio wordmark with embedded target</title>
+  <text x="203" y="190" text-anchor="end"
+        font-family="Poppins, -apple-system, system-ui, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="160" letter-spacing="-4"
+        fill="#6c5ce7">b</text>
+  <g transform="translate(251, 146)">
+    <circle r="47" fill="#6c5ce7"/>
+    <circle r="15" fill="#ffffff"/>
+    <circle r="4" fill="#6c5ce7"/>
+  </g>
+  <text x="299" y="190" text-anchor="start"
+        font-family="Poppins, -apple-system, system-ui, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="160" letter-spacing="-4"
+        fill="#6c5ce7">vio</text>
+</svg>

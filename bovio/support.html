@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Bovio</title>
+    <meta name="description" content="Get help with Bovio — the Bulls and Cows Discord bot. Slash command reference, FAQ, troubleshooting, and contact details.">
+    <meta name="author" content="Fiftify Inc.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6c5ce7">
+    <link rel="canonical" href="https://bovio.fiftify.com/support">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Support — Bovio">
+    <meta property="og:description" content="Slash command reference, FAQ, troubleshooting, and contact details for Bovio Discord bot.">
+    <meta property="og:url" content="https://bovio.fiftify.com/support">
+    <meta property="og:site_name" content="Bovio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="560">
+    <meta property="og:image:alt" content="Bovio — Bulls and Cows for Discord">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Support — Bovio">
+    <meta name="twitter:description" content="Commands, FAQ, and contact for the Bovio Discord bot.">
+    <meta name="twitter:image" content="https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png">
+    <meta name="twitter:image:alt" content="Bovio — Bulls and Cows for Discord">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/svg/bovio-avatar.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/png/bovio-avatar-512.png">
+    <link rel="apple-touch-icon" href="/assets/png/bovio-avatar-1024.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- Structured data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do Bulls and Cows work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bovio picks a secret 4-digit code with all different digits. On each /guess, Bovio reports Bulls (digits in the right position) and Cows (digits in the code but in a different position). Use the feedback to narrow down possibilities. The game ends when you hit 4 bulls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can multiple games run in the same server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Bovio runs one active match per channel on the free tier. Use different channels for parallel matches. Bovio Premium adds parallel games within a single channel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the daily challenge reset?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every day at 00:00 UTC. The puzzle is the same worldwide. Your attempt counts only once per day per user."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I subscribe to Bovio Premium?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subscribe from the Bovio listing in Discord's App Directory, or by running /premium in a server you administer. Discord handles the payment. The subscription is per-server and covers everyone in that server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data does Bovio store about me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only your Discord user ID, the guild/channel IDs of games you participate in, and your guesses with bull/cow counts. No usernames, avatars, IPs, emails, or messages other than slash command arguments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I delete all my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run /forget-me anywhere Bovio is installed. It immediately deletes your user record, all your guesses, your stats, and your daily-challenge attempts. The action is irreversible and requires no confirmation by us."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bovio: { 100: '#e9e4ff', 200: '#d4cbff', 300: '#b3a3ff', 400: '#9276ff', 500: '#7c5cff', 600: '#6c5ce7', 700: '#5546c4' },
+                        bull: { 500: '#10b981' },
+                        ink: { 100: '#eeeef4', 200: '#d9d9e3', 300: '#b3b3c4', 400: '#7d7d94', 500: '#52526b', 600: '#3a3a52', 700: '#2a2a3e', 800: '#1d1d2e', 900: '#131321', 950: '#0a0a14' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(124, 92, 255, 0.15); color: #b3a3ff; padding: 0.15em 0.45em; border-radius: 0.35em; font-size: 0.9em; }
+        details[open] summary svg { transform: rotate(180deg); }
+        summary { list-style: none; cursor: pointer; }
+        summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-ink-950 text-ink-200 antialiased">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-bovio-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <nav class="fixed top-0 w-full bg-ink-950/80 backdrop-blur-md z-50 border-b border-ink-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" aria-label="Bovio home">
+                <img src="assets/svg/bovio-mark.svg" alt="Bovio logo" class="h-8 w-8" width="32" height="32">
+                <span class="text-xl font-extrabold text-white">Bovio</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-300">
+                <a href="/" class="hover:text-bovio-400 transition">Home</a>
+                <a href="/privacy" class="hover:text-bovio-400 transition">Privacy</a>
+                <a href="/terms" class="hover:text-bovio-400 transition">Terms</a>
+                <a href="/refund" class="hover:text-bovio-400 transition">Refund</a>
+            </div>
+            <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+               target="_blank" rel="noopener"
+               class="bg-bovio-600 hover:bg-bovio-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-bovio-600/30">
+                Add to Discord
+            </a>
+        </div>
+    </nav>
+
+    <main id="main" class="max-w-3xl mx-auto px-4 py-12 pt-28">
+        <h1 class="text-4xl font-extrabold mb-2 text-white">Support</h1>
+        <p class="text-ink-400 text-lg mb-10">How to play, what to do when something breaks, and how to reach us.</p>
+
+        <!-- Quick contact -->
+        <section class="bg-bovio-600/10 border border-bovio-600/30 rounded-2xl p-6 mb-12">
+            <h2 class="font-semibold text-white text-lg mb-2">Need help right now?</h2>
+            <p class="text-ink-300">Email <a href="mailto:info@fiftify.com" class="text-bovio-300 font-semibold hover:text-bovio-200 hover:underline transition">info@fiftify.com</a> — we respond within 1–2 business days.</p>
+            <p class="text-ink-300 mt-2 text-sm">For data-erasure requests, the fastest path is running <code>/forget-me</code> directly in Discord.</p>
+        </section>
+
+        <!-- Commands -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-4">Commands</h2>
+            <div class="space-y-3">
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/start</code>
+                    <p class="text-sm text-ink-400 mt-1">Start a new game in the current channel. Bovio picks a secret 4-digit code with no repeating digits.</p>
+                </div>
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/guess &lt;number&gt;</code>
+                    <p class="text-sm text-ink-400 mt-1">Submit a 4-digit guess. Bovio replies with bulls 🐂 (right digit, right spot) and cows 🐄 (right digit, wrong spot).</p>
+                </div>
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/daily</code>
+                    <p class="text-sm text-ink-400 mt-1">Play today's global daily challenge. Same puzzle for everyone, resets at 00:00 UTC.</p>
+                </div>
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/stats</code>
+                    <p class="text-sm text-ink-400 mt-1">See your personal stats: games played, win rate, current streak, best attempts per difficulty.</p>
+                </div>
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/leaderboard</code>
+                    <p class="text-sm text-ink-400 mt-1">See the top players in this server. Premium servers also get tournament rankings.</p>
+                </div>
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/giveup</code>
+                    <p class="text-sm text-ink-400 mt-1">Abandon the current match in this channel. The code is revealed; the round is marked as abandoned in stats.</p>
+                </div>
+                <div class="border border-ink-800 bg-ink-900/50 rounded-xl p-4">
+                    <code class="text-base font-bold">/help</code>
+                    <p class="text-sm text-ink-400 mt-1">Inline command reference, plus links to this page and the legal docs.</p>
+                </div>
+                <div class="border border-rose-500/30 bg-rose-500/5 rounded-xl p-4">
+                    <code class="text-base font-bold">/forget-me</code>
+                    <p class="text-sm text-ink-400 mt-1">Erase all your personal data from Bovio. Immediate, irreversible, no questions asked. <a href="/privacy#section-8" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">What gets erased</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-4">FAQ</h2>
+            <div class="space-y-3">
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>How do Bulls and Cows work?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <div class="mt-3 text-ink-300 text-sm leading-relaxed">
+                        <p>Bovio picks a secret 4-digit code where all digits are different (e.g. <code>7314</code>). On each <code>/guess</code> you submit a 4-digit number and Bovio tells you:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li><strong class="text-white">Bulls 🐂</strong> — digits you got <em>right and in the right position</em></li>
+                            <li><strong class="text-white">Cows 🐄</strong> — digits in the code but in a <em>different position</em> than your guess</li>
+                        </ul>
+                        <p class="mt-3">Use the feedback to narrow down possibilities. The game ends when you hit 4 bulls.</p>
+                    </div>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>Can multiple games run in the same server?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Yes — Bovio runs <strong class="text-white">one active match per channel</strong> on the free tier. Use different channels for parallel matches. Bovio Premium adds parallel games within a single channel.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>Can anyone in the channel play, or just the one who started it?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Anyone in the channel can <code>/guess</code> on the active match. Guesses are credited to whoever submitted them, and personal stats reflect contribution per user.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>When does the daily challenge reset?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Every day at <strong class="text-white">00:00 UTC</strong>. The puzzle is the same worldwide. Your attempt counts only once per day per user.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>How do I subscribe to Bovio Premium?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Subscribe from the Bovio listing in Discord's App Directory, or by running <code>/premium</code> in a server you administer. Discord handles the payment. The subscription is per-server and covers everyone in that server.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>How do I cancel Bovio Premium or get a refund?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Cancel auto-renewal from Discord User Settings → Subscriptions. For refunds, see the <a href="/refund" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">Refund Policy</a> — 3-day window if premium features have not been used.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>What data does Bovio store about me?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Only your Discord user ID (a number, not your username), the guild/channel IDs of games you participate in, and the guesses you submit with their bull/cow counts. <strong class="text-white">No</strong> usernames, avatars, IPs, emails, or messages other than slash command arguments. Full details in the <a href="/privacy" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">Privacy Policy</a>.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>How do I delete all my data?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Run <code>/forget-me</code> anywhere Bovio is installed. It immediately deletes your user record, all your guesses, your stats, and your daily-challenge attempts. The action is irreversible and requires no confirmation by us.</p>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>Bovio is offline or commands aren't working — what now?</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <div class="mt-3 text-ink-300 text-sm">
+                        <p>Try these in order:</p>
+                        <ol class="list-decimal pl-6 mt-2 space-y-1">
+                            <li>Check Discord's <a href="https://discordstatus.com/" target="_blank" rel="noopener" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">status page</a> — most outages are platform-wide.</li>
+                            <li>Wait 60 seconds and retry — slash commands sometimes need to re-register after a deploy.</li>
+                            <li>Kick Bovio and re-add it from the App Directory. Your stats are tied to your Discord user ID, not to a particular install.</li>
+                            <li>If still broken, email <a href="mailto:info@fiftify.com" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">info@fiftify.com</a> with the guild ID and a description of what's happening.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="border border-ink-800 bg-ink-900/50 rounded-xl p-5">
+                    <summary class="flex items-center justify-between font-semibold text-white">
+                        <span>I think I found a security vulnerability.</span>
+                        <svg class="w-4 h-4 text-ink-400 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                    </summary>
+                    <p class="mt-3 text-ink-300 text-sm">Please report it privately to <a href="mailto:info@fiftify.com" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">info@fiftify.com</a> before any public disclosure. Include reproduction steps and impact. We aim to acknowledge within 2 business days.</p>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-4">Resources</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+                <a href="/privacy" class="block bg-ink-900 hover:bg-ink-800 border border-ink-800 hover:border-bovio-500/50 rounded-xl p-5 transition">
+                    <div class="font-semibold text-white">Privacy Policy</div>
+                    <p class="text-sm text-ink-400 mt-1">What we store, why, and your rights — including <code>/forget-me</code>.</p>
+                </a>
+                <a href="/terms" class="block bg-ink-900 hover:bg-ink-800 border border-ink-800 hover:border-bovio-500/50 rounded-xl p-5 transition">
+                    <div class="font-semibold text-white">Terms of Service</div>
+                    <p class="text-sm text-ink-400 mt-1">The rules for using Bovio in your server.</p>
+                </a>
+                <a href="/refund" class="block bg-ink-900 hover:bg-ink-800 border border-ink-800 hover:border-bovio-500/50 rounded-xl p-5 transition">
+                    <div class="font-semibold text-white">Refund Policy</div>
+                    <p class="text-sm text-ink-400 mt-1">How Bovio Premium refunds work with Discord billing.</p>
+                </a>
+                <a href="https://discordstatus.com/" target="_blank" rel="noopener" class="block bg-ink-900 hover:bg-ink-800 border border-ink-800 hover:border-bovio-500/50 rounded-xl p-5 transition">
+                    <div class="font-semibold text-white">Discord Status ↗</div>
+                    <p class="text-sm text-ink-400 mt-1">Check whether Discord-wide issues are affecting Bovio.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-4">Contact</h2>
+            <p class="text-white"><strong>Fiftify Inc.</strong><br><span class="text-ink-300">1111B S Governors Ave, STE 23190<br>Dover, DE 19904, USA</span></p>
+            <p class="text-ink-300 mt-3">Email: <a href="mailto:info@fiftify.com" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">info@fiftify.com</a></p>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-ink-800 py-8 mt-12">
+        <div class="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
+            <span>&copy; 2026 Fiftify Inc.</span>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/" class="hover:text-bovio-400 transition">Home</a>
+                <a href="/privacy" class="hover:text-bovio-400 transition">Privacy</a>
+                <a href="/terms" class="hover:text-bovio-400 transition">Terms</a>
+                <a href="/refund" class="hover:text-bovio-400 transition">Refund</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

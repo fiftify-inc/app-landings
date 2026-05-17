@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bovio — Bulls and Cows for Discord</title>
+    <meta name="description" content="Bovio brings the classic Bulls and Cows number-guessing puzzle to your Discord community. Daily global challenges, server leaderboards, premium tournaments.">
+    <meta name="keywords" content="Discord bot, Bulls and Cows, number game, daily challenge, Discord game, code guessing, brain game, Discord community">
+    <meta name="author" content="Fiftify Inc.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6c5ce7">
+    <meta name="apple-mobile-web-app-title" content="Bovio">
+    <link rel="canonical" href="https://bovio.fiftify.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bovio — Bulls and Cows for Discord">
+    <meta property="og:description" content="Crack the code daily. Discord bot bringing Bulls and Cows to your community — daily global puzzles, server leaderboards, premium tournaments.">
+    <meta property="og:url" content="https://bovio.fiftify.com/">
+    <meta property="og:site_name" content="Bovio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="560">
+    <meta property="og:image:alt" content="Bovio — Bulls and Cows for Discord">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bovio — Bulls and Cows for Discord">
+    <meta name="twitter:description" content="Crack the code daily. Bulls and Cows for your Discord community.">
+    <meta name="twitter:image" content="https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png">
+    <meta name="twitter:image:alt" content="Bovio — Bulls and Cows for Discord">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/svg/bovio-avatar.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/png/bovio-avatar-512.png">
+    <link rel="apple-touch-icon" href="/assets/png/bovio-avatar-1024.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- Structured data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bovio",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Discord",
+      "description": "A Discord bot that brings the classic Bulls and Cows number-guessing puzzle to Discord servers. Free tier plus per-server premium subscription.",
+      "url": "https://bovio.fiftify.com/",
+      "image": "https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Bovio Premium",
+          "price": "4.99",
+          "priceCurrency": "USD",
+          "category": "subscription"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Fiftify Inc.",
+        "url": "https://fiftify.com/"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bovio: {
+                            50:  '#f3f1ff',
+                            100: '#e9e4ff',
+                            200: '#d4cbff',
+                            300: '#b3a3ff',
+                            400: '#9276ff',
+                            500: '#7c5cff',
+                            600: '#6c5ce7',
+                            700: '#5546c4',
+                            800: '#42389c',
+                            900: '#322b75',
+                            950: '#1f1b4a',
+                        },
+                        bull: { 500: '#10b981', 600: '#059669' },
+                        cow:  { 500: '#f59e0b', 600: '#d97706' },
+                        ink: {
+                            50:  '#f8f8fb',
+                            100: '#eeeef4',
+                            200: '#d9d9e3',
+                            300: '#b3b3c4',
+                            400: '#7d7d94',
+                            500: '#52526b',
+                            600: '#3a3a52',
+                            700: '#2a2a3e',
+                            800: '#1d1d2e',
+                            900: '#131321',
+                            950: '#0a0a14',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-hero {
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 92, 255, 0.35), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(16, 185, 129, 0.15), transparent),
+                linear-gradient(180deg, #0a0a14 0%, #131321 100%);
+        }
+        .gradient-cta {
+            background: linear-gradient(135deg, #6c5ce7 0%, #9276ff 100%);
+        }
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(124, 92, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124, 92, 255, 0.08) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+        .digit-tile {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(124, 92, 255, 0.3);
+            background: rgba(124, 92, 255, 0.1);
+            color: #e9e4ff;
+            font-size: 1.5rem;
+        }
+        .digit-tile.bull { border-color: #10b981; background: rgba(16, 185, 129, 0.15); color: #6ee7b7; }
+        .digit-tile.cow  { border-color: #f59e0b; background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .float-animation { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-ink-950 text-ink-100 antialiased font-sans">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-bovio-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full bg-ink-950/80 backdrop-blur-md z-50 border-b border-ink-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" aria-label="Bovio home">
+                <img src="assets/svg/bovio-mark.svg" alt="Bovio logo" class="h-8 w-8" width="32" height="32">
+                <span class="text-xl font-extrabold text-white">Bovio</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-300">
+                <a href="#how-it-works" class="hover:text-bovio-400 transition">How it works</a>
+                <a href="#features" class="hover:text-bovio-400 transition">Features</a>
+                <a href="#pricing" class="hover:text-bovio-400 transition">Pricing</a>
+                <a href="/support" class="hover:text-bovio-400 transition">Support</a>
+            </div>
+            <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+               target="_blank" rel="noopener"
+               class="bg-bovio-600 hover:bg-bovio-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-bovio-600/30">
+                Add to Discord
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="main" class="gradient-hero pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-50"></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-bovio-600/15 border border-bovio-500/30 text-bovio-200 px-4 py-1.5 rounded-full text-sm font-medium mb-8">
+                    <span class="w-2 h-2 bg-bull-500 rounded-full animate-pulse"></span>
+                    Now in Discord App Directory
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.05] mb-6 tracking-tight">
+                    Crack the code<br>
+                    <span class="bg-gradient-to-r from-bovio-300 via-bovio-400 to-bull-500 bg-clip-text text-transparent">in&nbsp;Discord.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-ink-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Bovio brings <span class="text-white font-semibold">Bulls and Cows</span> — the classic number-guessing puzzle — to your community. Daily global challenges, server leaderboards, premium tournaments.
+                </p>
+
+                <!-- Sample game preview -->
+                <div class="flex justify-center gap-2 mb-10 float-animation">
+                    <span class="digit-tile bull">7</span>
+                    <span class="digit-tile">3</span>
+                    <span class="digit-tile cow">1</span>
+                    <span class="digit-tile">9</span>
+                </div>
+                <div class="text-sm text-ink-400 mb-10 font-mono">
+                    <span class="text-bull-500 font-semibold">1🐂</span> bull (right digit, right spot) ·
+                    <span class="text-cow-500 font-semibold">1🐄</span> cow (right digit, wrong spot)
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+                       target="_blank" rel="noopener"
+                       class="inline-flex items-center justify-center gap-3 bg-bovio-600 hover:bg-bovio-500 text-white px-8 py-4 rounded-2xl font-bold text-lg transition shadow-2xl shadow-bovio-600/40">
+                        <svg class="w-6 h-6" viewBox="0 0 71 55" fill="currentColor" role="img" aria-label="Discord">
+                            <title>Discord</title>
+                            <path d="M60.1 4.9A58.6 58.6 0 0 0 45.5.5a.2.2 0 0 0-.2.1 40.8 40.8 0 0 0-1.8 3.7 54.2 54.2 0 0 0-16.3 0A37.5 37.5 0 0 0 25.4.6a.2.2 0 0 0-.2-.1A58.4 58.4 0 0 0 10.6 4.9a.2.2 0 0 0-.1.1A60.1 60.1 0 0 0 .1 45.5a.2.2 0 0 0 .1.2 58.8 58.8 0 0 0 17.7 9 .2.2 0 0 0 .2-.1c1.4-1.9 2.6-3.9 3.7-6 0-.1 0-.2-.1-.3-2-.7-3.9-1.6-5.7-2.7-.2-.1-.2-.3 0-.4l1.1-.9c.1 0 .2-.1.3 0 12 5.5 24.9 5.5 36.8 0 .1-.1.2 0 .3 0 .4.3.7.6 1.1.9.2.1.2.3 0 .4-1.8 1.1-3.7 2-5.7 2.7-.1 0-.2.2-.1.3 1.1 2.1 2.3 4.1 3.7 6 .1.1.2.1.3.1 5.8-1.8 11.7-4.5 17.7-9a.2.2 0 0 0 .1-.2A60 60 0 0 0 60.2 5a.2.2 0 0 0-.1-.1ZM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.1 0-4 2.8-7.2 6.4-7.2 3.6 0 6.5 3.2 6.4 7.2 0 4-2.8 7.1-6.4 7.1Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.1 0-4 2.8-7.2 6.4-7.2 3.6 0 6.5 3.2 6.4 7.2 0 4-2.8 7.1-6.4 7.1Z"/>
+                        </svg>
+                        Add to Discord
+                    </a>
+                    <a href="#how-it-works"
+                       class="inline-flex items-center justify-center gap-2 bg-ink-800 hover:bg-ink-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition border border-ink-700">
+                        See how it works
+                    </a>
+                </div>
+                <p class="text-xs text-ink-500 mt-6">Free forever core game · No ads · 30 seconds to install</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-20 md:py-28 bg-ink-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Three slash commands.<br>One ancient game.</h2>
+                <p class="text-ink-400 text-lg max-w-2xl mx-auto">Bovio runs on Discord slash commands. No setup, no permissions to wire up — just install and play.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-ink-800 rounded-3xl p-8 border border-ink-700 hover:border-bovio-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-bovio-600/20 text-bovio-400 flex items-center justify-center text-xl font-bold mb-5">1</div>
+                    <h3 class="font-bold text-xl mb-3 text-white">Add Bovio to your server</h3>
+                    <p class="text-ink-300 leading-relaxed">One click in Discord — pick a server you administer, confirm the bot scope. Bovio joins read-only and only listens to slash commands.</p>
+                </div>
+                <div class="bg-ink-800 rounded-3xl p-8 border border-ink-700 hover:border-bovio-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-bovio-600/20 text-bovio-400 flex items-center justify-center text-xl font-bold mb-5">2</div>
+                    <h3 class="font-bold text-xl mb-3 text-white">Type <span class="font-mono text-bovio-300">/start</span></h3>
+                    <p class="text-ink-300 leading-relaxed">Bovio generates a secret 4-digit code — all unique digits — and starts a match in that channel. Anyone in the channel can play.</p>
+                </div>
+                <div class="bg-ink-800 rounded-3xl p-8 border border-ink-700 hover:border-bovio-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-bovio-600/20 text-bovio-400 flex items-center justify-center text-xl font-bold mb-5">3</div>
+                    <h3 class="font-bold text-xl mb-3 text-white">Guess with <span class="font-mono text-bovio-300">/guess</span></h3>
+                    <p class="text-ink-300 leading-relaxed">Each guess returns <span class="text-bull-500 font-semibold">bulls</span> 🐂 (right digit, right place) and <span class="text-cow-500 font-semibold">cows</span> 🐄 (right digit, wrong place). Close in on the code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Challenge -->
+    <section class="py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="rounded-3xl border border-bovio-500/30 bg-gradient-to-br from-bovio-950/40 to-ink-900 p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute inset-0 grid-bg opacity-30"></div>
+                <div class="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-bull-500/10 border border-bull-500/30 text-bull-500 px-3 py-1 rounded-full text-xs font-semibold mb-5">
+                            <span class="w-1.5 h-1.5 bg-bull-500 rounded-full animate-pulse"></span>
+                            DAILY CHALLENGE
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight mb-4">One puzzle.<br>One world.<br>Every day at <span class="text-bovio-400 font-mono">00:00 UTC</span>.</h2>
+                        <p class="text-ink-300 leading-relaxed mb-6">Every Discord server playing Bovio gets the same daily puzzle. Race the world — your time and attempts go on a global leaderboard reset each day.</p>
+                        <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+                           target="_blank" rel="noopener"
+                           class="inline-flex items-center gap-2 text-bovio-300 font-semibold hover:text-bovio-200 transition">
+                            Try today's challenge
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    <div class="bg-ink-950/60 rounded-2xl p-6 border border-ink-800 font-mono text-sm">
+                        <div class="text-ink-500 text-xs mb-3">@bovio · today</div>
+                        <div class="text-ink-200 mb-4">🌍 <span class="font-semibold">Daily Challenge #284</span></div>
+                        <div class="space-y-2 text-ink-300">
+                            <div><span class="text-bovio-300">/guess</span> 1234 → <span class="text-bull-500">0🐂</span> <span class="text-cow-500">2🐄</span></div>
+                            <div><span class="text-bovio-300">/guess</span> 5678 → <span class="text-bull-500">1🐂</span> <span class="text-cow-500">1🐄</span></div>
+                            <div><span class="text-bovio-300">/guess</span> 9023 → <span class="text-bull-500">2🐂</span> <span class="text-cow-500">1🐄</span></div>
+                            <div><span class="text-bovio-300">/guess</span> 9043 → <span class="text-bull-500">4🐂</span> <span class="text-cow-500">0🐄</span></div>
+                            <div class="pt-2 mt-2 border-t border-ink-800 text-bull-500 font-semibold">🎉 Solved in 4 guesses · #38 worldwide</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 md:py-28 bg-ink-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Built for communities.</h2>
+                <p class="text-ink-400 text-lg max-w-2xl mx-auto">Everything a Discord server needs to keep brain-cells warm.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-ink-800/50 rounded-3xl p-7 border border-ink-700">
+                    <div class="text-3xl mb-4">🎯</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">One match per channel</h3>
+                    <p class="text-ink-400 text-sm leading-relaxed">Each channel runs its own game. Switch channels for parallel matches.</p>
+                </div>
+                <div class="bg-ink-800/50 rounded-3xl p-7 border border-ink-700">
+                    <div class="text-3xl mb-4">📊</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Personal stats</h3>
+                    <p class="text-ink-400 text-sm leading-relaxed">Track wins, streaks, best attempts per difficulty. <span class="font-mono text-bovio-300">/stats</span> shows it all.</p>
+                </div>
+                <div class="bg-ink-800/50 rounded-3xl p-7 border border-ink-700">
+                    <div class="text-3xl mb-4">🏆</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Server leaderboards</h3>
+                    <p class="text-ink-400 text-sm leading-relaxed">See who in your server is the sharpest. Daily, weekly, all-time rankings.</p>
+                </div>
+                <div class="bg-ink-800/50 rounded-3xl p-7 border border-ink-700">
+                    <div class="text-3xl mb-4">🌍</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Global daily challenge</h3>
+                    <p class="text-ink-400 text-sm leading-relaxed">One shared puzzle every day at 00:00 UTC. Compete with the entire Bovio community.</p>
+                </div>
+                <div class="bg-ink-800/50 rounded-3xl p-7 border border-ink-700">
+                    <div class="text-3xl mb-4">🔐</div>
+                    <h3 class="font-bold text-lg mb-2 text-white">Privacy by design</h3>
+                    <p class="text-ink-400 text-sm leading-relaxed">We store only Discord IDs and your guesses. No usernames, no IPs, no messages.</p>
+                </div>
+                <div class="bg-ink-800/50 rounded-3xl p-7 border border-ink-700">
+                    <div class="text-3xl mb-4">🧹</div>
+                    <h3 class="font-bold text-lg mb-2 text-white"><span class="font-mono text-bovio-300">/forget-me</span></h3>
+                    <p class="text-ink-400 text-sm leading-relaxed">One command erases all your data. GDPR-grade right to erasure, no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Free forever.<br>Premium when you want more.</h2>
+                <p class="text-ink-400 text-lg max-w-2xl mx-auto">Bovio Premium is billed by Discord directly — one subscription covers your whole server.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Free -->
+                <div class="bg-ink-900 rounded-3xl p-8 border border-ink-800">
+                    <div class="flex items-baseline justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white">Free</h3>
+                        <div class="text-right">
+                            <div class="text-3xl font-black text-white">$0</div>
+                            <div class="text-xs text-ink-500">forever</div>
+                        </div>
+                    </div>
+                    <p class="text-ink-400 text-sm mb-6">Everything a community needs to get hooked.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-3"><span class="text-bull-500 shrink-0">✓</span><span class="text-ink-200">Classic 4-digit Bulls and Cows</span></li>
+                        <li class="flex gap-3"><span class="text-bull-500 shrink-0">✓</span><span class="text-ink-200">One match per channel</span></li>
+                        <li class="flex gap-3"><span class="text-bull-500 shrink-0">✓</span><span class="text-ink-200">Personal stats and server leaderboard</span></li>
+                        <li class="flex gap-3"><span class="text-bull-500 shrink-0">✓</span><span class="text-ink-200">Daily global challenge</span></li>
+                        <li class="flex gap-3"><span class="text-bull-500 shrink-0">✓</span><span class="text-ink-200"><span class="font-mono text-bovio-300">/forget-me</span> data erasure</span></li>
+                        <li class="flex gap-3"><span class="text-bull-500 shrink-0">✓</span><span class="text-ink-200">Never any ads</span></li>
+                    </ul>
+                </div>
+
+                <!-- Premium -->
+                <div class="relative rounded-3xl p-8 bg-gradient-to-br from-bovio-950/40 to-ink-900 border border-bovio-500/40">
+                    <div class="absolute -top-3 left-8 inline-flex items-center gap-1 bg-bovio-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Premium</div>
+                    <div class="flex items-baseline justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white">Bovio Premium</h3>
+                        <div class="text-right">
+                            <div class="text-3xl font-black text-white">$4.99</div>
+                            <div class="text-xs text-ink-400">per server / month</div>
+                        </div>
+                    </div>
+                    <p class="text-ink-300 text-sm mb-6">Unlock the full game. Billed by Discord.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100"><span class="font-semibold">Everything in Free</span>, plus:</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">3/5/6-digit difficulty modes</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">Repeating-digits variant</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">Parallel games on one channel</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">Server-vs-server tournaments</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">PvP duels</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">Custom themes</span></li>
+                        <li class="flex gap-3"><span class="text-bovio-400 shrink-0">★</span><span class="text-ink-100">Admin analytics dashboard</span></li>
+                    </ul>
+                    <p class="text-xs text-ink-500 mt-6">3-day refund window if unused. Cancel anytime in Discord settings. <a href="/refund" class="text-bovio-300 hover:text-bovio-200 underline">Refund policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 md:py-28 bg-ink-900">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="gradient-cta rounded-3xl p-12 md:p-16 shadow-2xl shadow-bovio-600/30 relative overflow-hidden">
+                <div class="absolute inset-0 grid-bg opacity-20"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Crack today's code.</h2>
+                    <p class="text-bovio-100 text-lg mb-8 max-w-lg mx-auto">Add Bovio to your Discord server in 30 seconds. Free forever.</p>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+                       target="_blank" rel="noopener"
+                       class="inline-flex items-center gap-3 bg-white text-bovio-700 hover:bg-bovio-50 px-8 py-4 rounded-2xl font-bold text-lg transition shadow-xl">
+                        <svg class="w-6 h-6" viewBox="0 0 71 55" fill="currentColor" role="img" aria-label="Discord">
+                            <title>Discord</title>
+                            <path d="M60.1 4.9A58.6 58.6 0 0 0 45.5.5a.2.2 0 0 0-.2.1 40.8 40.8 0 0 0-1.8 3.7 54.2 54.2 0 0 0-16.3 0A37.5 37.5 0 0 0 25.4.6a.2.2 0 0 0-.2-.1A58.4 58.4 0 0 0 10.6 4.9a.2.2 0 0 0-.1.1A60.1 60.1 0 0 0 .1 45.5a.2.2 0 0 0 .1.2 58.8 58.8 0 0 0 17.7 9 .2.2 0 0 0 .2-.1c1.4-1.9 2.6-3.9 3.7-6 0-.1 0-.2-.1-.3-2-.7-3.9-1.6-5.7-2.7-.2-.1-.2-.3 0-.4l1.1-.9c.1 0 .2-.1.3 0 12 5.5 24.9 5.5 36.8 0 .1-.1.2 0 .3 0 .4.3.7.6 1.1.9.2.1.2.3 0 .4-1.8 1.1-3.7 2-5.7 2.7-.1 0-.2.2-.1.3 1.1 2.1 2.3 4.1 3.7 6 .1.1.2.1.3.1 5.8-1.8 11.7-4.5 17.7-9a.2.2 0 0 0 .1-.2A60 60 0 0 0 60.2 5a.2.2 0 0 0-.1-.1ZM23.7 37.3c-3.5 0-6.4-3.2-6.4-7.1 0-4 2.8-7.2 6.4-7.2 3.6 0 6.5 3.2 6.4 7.2 0 4-2.8 7.1-6.4 7.1Zm23.6 0c-3.5 0-6.4-3.2-6.4-7.1 0-4 2.8-7.2 6.4-7.2 3.6 0 6.5 3.2 6.4 7.2 0 4-2.8 7.1-6.4 7.1Z"/>
+                        </svg>
+                        Add to Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink-950 border-t border-ink-800 py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="assets/svg/bovio-mark.svg" alt="Bovio logo" class="h-6 w-6" width="24" height="24">
+                    <span class="font-bold text-white">Bovio</span>
+                    <span class="text-ink-500 text-sm ml-2">by <a href="https://fiftify.com/" target="_blank" rel="noopener" class="hover:text-bovio-400 transition">Fiftify Inc.</a></span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-ink-400">
+                    <a href="/privacy" class="hover:text-bovio-400 transition">Privacy</a>
+                    <a href="/terms" class="hover:text-bovio-400 transition">Terms</a>
+                    <a href="/refund" class="hover:text-bovio-400 transition">Refund</a>
+                    <a href="/support" class="hover:text-bovio-400 transition">Support</a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-xs text-ink-500 max-w-2xl mx-auto">
+                &copy; 2026 Fiftify Inc. All rights reserved.<br class="md:hidden">
+                <span class="hidden md:inline"> · </span>
+                Bovio is not affiliated with, endorsed by, or sponsored by Discord Inc. "Discord" is a trademark of Discord Inc.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

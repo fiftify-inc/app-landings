@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Bovio</title>
+    <meta name="description" content="How Bovio, a Discord game bot by Fiftify Inc., handles your data. Minimal collection, EU data residency in Frankfurt, instant /forget-me erasure.">
+    <meta name="author" content="Fiftify Inc.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6c5ce7">
+    <link rel="canonical" href="https://bovio.fiftify.com/privacy">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Privacy Policy — Bovio">
+    <meta property="og:description" content="How Bovio handles your data. Minimal collection, EU data residency, instant /forget-me erasure.">
+    <meta property="og:url" content="https://bovio.fiftify.com/privacy">
+    <meta property="og:site_name" content="Bovio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="560">
+    <meta property="og:image:alt" content="Bovio — Bulls and Cows for Discord">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy — Bovio">
+    <meta name="twitter:description" content="How Bovio handles your data. Minimal collection, EU data residency, instant /forget-me erasure.">
+    <meta name="twitter:image" content="https://bovio.fiftify.com/assets/png/bovio-embedded-1280.png">
+    <meta name="twitter:image:alt" content="Bovio — Bulls and Cows for Discord">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/svg/bovio-avatar.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/png/bovio-avatar-512.png">
+    <link rel="apple-touch-icon" href="/assets/png/bovio-avatar-1024.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bovio: { 100: '#e9e4ff', 200: '#d4cbff', 300: '#b3a3ff', 400: '#9276ff', 500: '#7c5cff', 600: '#6c5ce7', 700: '#5546c4' },
+                        ink: { 100: '#eeeef4', 200: '#d9d9e3', 300: '#b3b3c4', 400: '#7d7d94', 500: '#52526b', 600: '#3a3a52', 700: '#2a2a3e', 800: '#1d1d2e', 900: '#131321', 950: '#0a0a14' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        code { font-family: 'JetBrains Mono', monospace; background: rgba(124, 92, 255, 0.15); color: #b3a3ff; padding: 0.1em 0.4em; border-radius: 0.3em; font-size: 0.9em; }
+    </style>
+</head>
+<body class="bg-ink-950 text-ink-200 antialiased">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-bovio-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Skip to content</a>
+
+    <nav class="fixed top-0 w-full bg-ink-950/80 backdrop-blur-md z-50 border-b border-ink-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" aria-label="Bovio home">
+                <img src="assets/svg/bovio-mark.svg" alt="Bovio logo" class="h-8 w-8" width="32" height="32">
+                <span class="text-xl font-extrabold text-white">Bovio</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-300">
+                <a href="/" class="hover:text-bovio-400 transition">Home</a>
+                <a href="/terms" class="hover:text-bovio-400 transition">Terms</a>
+                <a href="/refund" class="hover:text-bovio-400 transition">Refund</a>
+                <a href="/support" class="hover:text-bovio-400 transition">Support</a>
+            </div>
+            <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+               target="_blank" rel="noopener"
+               class="bg-bovio-600 hover:bg-bovio-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-bovio-600/30">
+                Add to Discord
+            </a>
+        </div>
+    </nav>
+
+    <main id="main" class="max-w-3xl mx-auto px-4 py-12 pt-28">
+        <h1 class="text-4xl font-extrabold mb-2 text-white">Privacy Policy</h1>
+        <p class="text-ink-400 text-sm mb-2">Effective date: May 16, 2026 · Version: draft-1</p>
+        <div class="bg-amber-500/10 border border-amber-500/30 text-amber-200 rounded-xl p-4 text-sm mb-10">
+            <strong class="text-amber-100">Working draft.</strong> This document is the engineering team's accurate baseline of Bovio's data practices. It has not yet been reviewed by qualified legal counsel, and inline notes marked <em>[review with lawyer]</em> flag items that need legal sign-off before publication.
+        </div>
+
+        <div class="space-y-8 text-[15px] leading-relaxed text-ink-300">
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">1. Who we are</h2>
+                <p>Bovio is a Discord application that lets community members play the "Bulls and Cows" code-guessing game inside their Discord servers. Bovio is operated by <strong class="text-white">Fiftify Inc.</strong>, a Delaware corporation, registered at 1111B S Governors Ave, STE 23190, Dover, DE 19904, USA ("we", "us", "our").</p>
+                <p class="mt-3">This policy describes what data Bovio collects from Discord users and server administrators, why we collect it, how we store it, and what rights you have over it.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">2. What data Bovio collects</h2>
+                <p>Bovio is built to be minimal. We collect only what we need to run the game and operate the service.</p>
+
+                <h3 class="text-lg font-medium mt-5 mb-2 text-white">2.1 From Discord</h3>
+                <p>When you interact with Bovio in a Discord server, Discord sends us the following:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Your <strong class="text-white">Discord user ID</strong> (numeric snowflake — not your username, display name, email, or avatar)</li>
+                    <li>The <strong class="text-white">guild (server) ID</strong> where the interaction happened</li>
+                    <li>The <strong class="text-white">channel ID</strong> where the interaction happened</li>
+                    <li>The <strong class="text-white">content of slash command arguments you provide</strong> (e.g. the number you submit to <code>/guess</code>)</li>
+                    <li>For premium servers: <strong class="text-white">active entitlement records</strong> for our application</li>
+                </ul>
+                <p class="mt-3">We <strong class="text-white">do not</strong> receive or store:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Your username, display name, avatar, email, or any other Discord profile data</li>
+                    <li>Your IP address</li>
+                    <li>Messages other than slash command arguments</li>
+                    <li>Voice activity, presence, or member list data — we explicitly do not request the relevant Privileged Gateway Intents</li>
+                </ul>
+
+                <h3 class="text-lg font-medium mt-5 mb-2 text-white">2.2 What we generate ourselves</h3>
+                <p>For each game you play, we generate and store:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>The secret number for the game (server-side, never displayed until game end)</li>
+                    <li>Records of each guess you make, with timestamps and bull/cow counts</li>
+                    <li>Game status (active / won / abandoned)</li>
+                    <li>Aggregated statistics: total games, total wins, current streak, longest streak, best-attempts per difficulty</li>
+                </ul>
+
+                <h3 class="text-lg font-medium mt-5 mb-2 text-white">2.3 From Discord's monetization system (premium subscribers only)</h3>
+                <p>If your server subscribes to Bovio Premium:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Discord sends us an <strong class="text-white">entitlement record</strong> containing the SKU ID, guild ID, start date, and expiry date</li>
+                    <li>Discord (not us) handles payment processing; we never see your payment details</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">3. Why we collect each item</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm border-collapse mt-3">
+                        <thead>
+                            <tr class="bg-ink-900 border-b border-ink-700">
+                                <th class="text-left p-3 font-semibold text-white">Data</th>
+                                <th class="text-left p-3 font-semibold text-white">Purpose</th>
+                                <th class="text-left p-3 font-semibold text-white">Legal basis (GDPR Art. 6)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-ink-800">
+                            <tr><td class="p-3">Discord user ID</td><td class="p-3">Identify you across games for stats and leaderboards</td><td class="p-3">Performance of a contract</td></tr>
+                            <tr><td class="p-3">Guild / channel IDs</td><td class="p-3">Run games in the correct server context</td><td class="p-3">Performance of a contract</td></tr>
+                            <tr><td class="p-3">Guess contents + bull/cow counts</td><td class="p-3">Run the game</td><td class="p-3">Performance of a contract</td></tr>
+                            <tr><td class="p-3">Aggregated statistics</td><td class="p-3">Show <code>/stats</code> and the server <code>/leaderboard</code></td><td class="p-3">Performance of a contract</td></tr>
+                            <tr><td class="p-3">Subscription entitlement</td><td class="p-3">Grant access to premium features</td><td class="p-3">Performance of a contract</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4">We do not use your data for advertising. We do not sell, rent, or trade your data.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">4. Where your data lives</h2>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li><strong class="text-white">Primary database:</strong> PostgreSQL hosted on <strong class="text-white">Fly.io</strong> in the Frankfurt (<code>fra</code>) region. Data does not leave this region.</li>
+                    <li><strong class="text-white">Hosting / compute:</strong> Fly.io machines, same region as the database.</li>
+                    <li><strong class="text-white">Backups:</strong> Fly Managed Postgres automated daily snapshots, retained for 7 days.</li>
+                    <li><strong class="text-white">Logs:</strong> stdout captured by Fly, retained for approximately 30 days (Fly default). We do not log secrets, in-progress game codes, or guess contents at INFO level.</li>
+                </ul>
+                <p class="mt-3">We do not use third-party analytics, advertising networks, or behavioural tracking on the bot.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">5. Sub-processors</h2>
+                <p>We do not sell your personal data. We share it only with sub-processors strictly needed to run the service:</p>
+                <div class="mt-4 space-y-4">
+                    <div class="bg-ink-900 border border-ink-800 rounded-xl p-4">
+                        <h4 class="font-semibold text-white">Discord, Inc.</h4>
+                        <p class="text-sm text-ink-400 mt-1">Purpose: the platform Bovio runs on; routes our messages and yours. Jurisdiction: United States.<br>
+                        <a href="https://discord.com/privacy" class="text-bovio-400 hover:text-bovio-300 hover:underline transition" target="_blank" rel="noopener">Discord Privacy Policy</a></p>
+                    </div>
+                    <div class="bg-ink-900 border border-ink-800 rounded-xl p-4">
+                        <h4 class="font-semibold text-white">Fly.io, Inc.</h4>
+                        <p class="text-sm text-ink-400 mt-1">Purpose: application hosting and managed Postgres database in the EU (Frankfurt region). Jurisdiction: United States; data physically stored in Germany.<br>
+                        <a href="https://fly.io/legal/privacy-policy/" class="text-bovio-400 hover:text-bovio-300 hover:underline transition" target="_blank" rel="noopener">Fly.io Privacy Policy</a></p>
+                    </div>
+                    <div class="bg-ink-900 border border-ink-800 rounded-xl p-4">
+                        <h4 class="font-semibold text-white">Stripe (via Discord)</h4>
+                        <p class="text-sm text-ink-400 mt-1">Purpose: payment processing for Bovio Premium, managed entirely by Discord. We do not receive payment card data. Jurisdiction: United States.<br>
+                        <a href="https://stripe.com/privacy" class="text-bovio-400 hover:text-bovio-300 hover:underline transition" target="_blank" rel="noopener">Stripe Privacy Policy</a></p>
+                    </div>
+                </div>
+                <p class="mt-4 text-sm text-ink-400">International transfers from the EU/UK to the US rely on each processor's published mechanisms (Standard Contractual Clauses; EU–US Data Privacy Framework where applicable). See each provider's privacy policy for current details.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">6. How long we keep your data</h2>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li><strong class="text-white">Game and guess history:</strong> indefinite by default, used for stats and leaderboards. You can erase it at any time with <code>/forget-me</code> (see § 8).</li>
+                    <li><strong class="text-white">Aggregated user stats:</strong> indefinite; erased by <code>/forget-me</code>.</li>
+                    <li><strong class="text-white">Daily challenge attempt records:</strong> indefinite; erased by <code>/forget-me</code>.</li>
+                    <li><strong class="text-white">Subscription records:</strong> retained even after expiry for accounting and tax compliance — typically 7 years for US financial records. <em>[review with lawyer — exact retention depends on applicable tax law]</em></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">7. Your rights</h2>
+                <p>Under GDPR (if you are in the EU/EEA/UK) and similar laws elsewhere (CCPA in California, etc.), you have the right to:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li><strong class="text-white">Access</strong> — request a copy of all data linked to your Discord user ID</li>
+                    <li><strong class="text-white">Erasure</strong> — have all linked data deleted. The fastest way is <code>/forget-me</code> in Discord; for support-channel requests email <a href="mailto:info@fiftify.com" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">info@fiftify.com</a></li>
+                    <li><strong class="text-white">Rectification</strong> — correct inaccurate data. For game records this generally does not apply (they are factual records of gameplay), but email us for edge cases</li>
+                    <li><strong class="text-white">Portability</strong> — request your data in a machine-readable format</li>
+                    <li><strong class="text-white">Objection / withdrawal of consent</strong> — in practice equivalent to erasure since processing is necessary to operate the bot</li>
+                    <li><strong class="text-white">Complaint</strong> — lodge a complaint with your local data protection authority</li>
+                </ul>
+                <p class="mt-3">To exercise any of these, run <code>/forget-me</code> in Discord or email <a href="mailto:info@fiftify.com" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">info@fiftify.com</a>. We respond within 30 days.</p>
+            </section>
+
+            <section id="section-8">
+                <h2 class="text-xl font-semibold mb-3 text-white">8. <code>/forget-me</code></h2>
+                <p><code>/forget-me</code> deletes, via database cascade:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Your <code>User</code> record</li>
+                    <li>All <code>Guess</code> records linked to you</li>
+                    <li>Your <code>UserStats</code> row</li>
+                    <li>All <code>DailyAttempt</code> records linked to you</li>
+                </ul>
+                <p class="mt-3">It does <strong class="text-white">not</strong> delete:</p>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Aggregated server statistics that do not reference your user ID (e.g. "this guild has played 1,200 games" is not personal data)</li>
+                    <li><code>Subscription</code> records linked to your user ID — these are retained for accounting per § 6 above</li>
+                </ul>
+                <p class="mt-3">The action is immediate and irreversible.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">9. Children</h2>
+                <p>Bovio is intended for users who meet Discord's minimum age requirement (13 in most countries, 16 in some EU member states such as Germany). We do not knowingly collect data from anyone below that age. If we learn a younger user's data is in our system, we delete it on request from a parent or guardian.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">10. Security</h2>
+                <ul class="list-disc pl-6 space-y-1 mt-2">
+                    <li>Data is encrypted in transit (TLS) between Discord, Bovio, and our database.</li>
+                    <li>Data is encrypted at rest by Fly Managed Postgres.</li>
+                    <li>Access to production systems is limited to a small number of Fiftify staff, gated by Fly.io credentials and 2FA.</li>
+                    <li>Discord bot tokens and database credentials are stored as Fly Secrets, never in source code or logs.</li>
+                    <li>We do not log secrets, in-progress game codes, or guess contents at INFO level.</li>
+                </ul>
+                <p class="mt-3">If a personal-data breach occurs, we will notify affected users within 72 hours where required by GDPR and post a public disclosure on the <a href="/support" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">support page</a>.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">11. Changes to this policy</h2>
+                <p>If we materially change how we process data, we will:</p>
+                <ol class="list-decimal pl-6 space-y-1 mt-2">
+                    <li>Update the <strong class="text-white">Effective date</strong> at the top</li>
+                    <li>Post a notice on this page and in the Bovio support server</li>
+                    <li>For substantive changes affecting existing users, send a Discord DM to the <strong class="text-white">server owner</strong> of every server Bovio is in</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">12. Governing law and jurisdiction</h2>
+                <p>This Privacy Policy is governed by the laws of the State of Delaware, United States, without regard to its conflict-of-laws principles. <em>[review with lawyer — confirm whether a Ukraine-based co-controller arrangement is intended; if so, this clause must be revised]</em></p>
+                <p class="mt-3">Without prejudice to the above, consumers in the EU/EEA/UK retain mandatory consumer-protection rights to bring proceedings in their local courts.</p>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-3 text-white">13. Contact</h2>
+                <p>For privacy questions, data-subject requests, or any concern about how Bovio handles your data:</p>
+                <p class="mt-3 text-white"><strong>Fiftify Inc.</strong><br><span class="text-ink-300">1111B S Governors Ave, STE 23190<br>Dover, DE 19904, USA<br>Email: <a href="mailto:info@fiftify.com" class="text-bovio-400 hover:text-bovio-300 hover:underline transition">info@fiftify.com</a></span></p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-ink-800 py-8 mt-12">
+        <div class="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
+            <span>&copy; 2026 Fiftify Inc.</span>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/" class="hover:text-bovio-400 transition">Home</a>
+                <a href="/terms" class="hover:text-bovio-400 transition">Terms</a>
+                <a href="/refund" class="hover:text-bovio-400 transition">Refund</a>
+                <a href="/support" class="hover:text-bovio-400 transition">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

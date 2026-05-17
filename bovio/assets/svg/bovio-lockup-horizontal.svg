@@ -1,0 +1,14 @@
+<svg width="950" height="240" viewBox="0 0 950 240" xmlns="http://www.w3.org/2000/svg">
+  <title>Bovio horizontal lockup</title>
+  <g transform="translate(200, 120)">
+    <circle r="80" fill="#6c5ce7"/>
+    <circle r="60" fill="#ffffff"/>
+    <circle r="40" fill="#6c5ce7"/>
+    <circle r="20" fill="#ffffff"/>
+    <circle r="8" fill="#6c5ce7"/>
+  </g>
+  <text x="310" y="172" text-anchor="start"
+        font-family="Poppins, -apple-system, system-ui, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="140" letter-spacing="-4"
+        fill="#6c5ce7">bovio</text>
+</svg>

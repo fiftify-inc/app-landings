@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page not found · Bovio</title>
+    <meta name="description" content="That page isn't here. Go back to Bovio's home or check the support page.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#6c5ce7">
+
+    <link rel="icon" type="image/svg+xml" href="/assets/svg/bovio-avatar.svg">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/png/bovio-avatar-512.png">
+    <link rel="apple-touch-icon" href="/assets/png/bovio-avatar-1024.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bovio: { 100: '#e9e4ff', 200: '#d4cbff', 300: '#b3a3ff', 400: '#9276ff', 500: '#7c5cff', 600: '#6c5ce7', 700: '#5546c4', 950: '#1f1b4a' },
+                        ink: { 100: '#eeeef4', 200: '#d9d9e3', 300: '#b3b3c4', 400: '#7d7d94', 500: '#52526b', 600: '#3a3a52', 700: '#2a2a3e', 800: '#1d1d2e', 900: '#131321', 950: '#0a0a14' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-hero {
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 92, 255, 0.35), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 20%, rgba(16, 185, 129, 0.10), transparent),
+                linear-gradient(180deg, #0a0a14 0%, #131321 100%);
+        }
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(124, 92, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124, 92, 255, 0.08) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+        .digit-tile {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 5rem;
+            border-radius: 0.75rem;
+            border: 1px solid rgba(124, 92, 255, 0.3);
+            background: rgba(124, 92, 255, 0.1);
+            color: #e9e4ff;
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body class="bg-ink-950 text-ink-200 antialiased min-h-screen flex flex-col">
+
+    <nav class="w-full bg-ink-950/80 backdrop-blur-md border-b border-ink-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" aria-label="Bovio home">
+                <img src="/assets/svg/bovio-mark.svg" alt="Bovio logo" class="h-8 w-8" width="32" height="32">
+                <span class="text-xl font-extrabold text-white">Bovio</span>
+            </a>
+            <a href="https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot"
+               target="_blank" rel="noopener"
+               class="bg-bovio-600 hover:bg-bovio-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-bovio-600/30">
+                Add to Discord
+            </a>
+        </div>
+    </nav>
+
+    <main class="gradient-hero relative overflow-hidden flex-1 flex items-center">
+        <div class="absolute inset-0 grid-bg opacity-50" aria-hidden="true"></div>
+        <div class="max-w-3xl mx-auto px-4 py-20 md:py-32 text-center relative z-10">
+            <div class="flex justify-center gap-3 mb-8" aria-hidden="true">
+                <span class="digit-tile">4</span>
+                <span class="digit-tile">0</span>
+                <span class="digit-tile">4</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-5 tracking-tight">
+                Wrong code.
+            </h1>
+            <p class="text-lg text-ink-300 mb-10 max-w-xl mx-auto">
+                That page isn't on Bovio. Maybe you mistyped a URL — or maybe we moved something. Head back to the homepage or check the support page.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/"
+                   class="inline-flex items-center justify-center gap-2 bg-bovio-600 hover:bg-bovio-500 text-white px-7 py-3.5 rounded-2xl font-bold transition shadow-xl shadow-bovio-600/30">
+                    Go home
+                </a>
+                <a href="/support"
+                   class="inline-flex items-center justify-center gap-2 bg-ink-800 hover:bg-ink-700 text-white px-7 py-3.5 rounded-2xl font-semibold transition border border-ink-700">
+                    Visit support
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-ink-950 border-t border-ink-800 py-8">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-500">
+            <span>&copy; 2026 Fiftify Inc.</span>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/" class="hover:text-bovio-400 transition">Home</a>
+                <a href="/privacy" class="hover:text-bovio-400 transition">Privacy</a>
+                <a href="/terms" class="hover:text-bovio-400 transition">Terms</a>
+                <a href="/refund" class="hover:text-bovio-400 transition">Refund</a>
+                <a href="/support" class="hover:text-bovio-400 transition">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
