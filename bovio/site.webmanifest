@@ -1,0 +1,24 @@
+{
+  "name": "Bovio — Bulls and Cows for Discord",
+  "short_name": "Bovio",
+  "description": "Bulls and Cows code-guessing game bot for Discord servers. Daily global challenges, server leaderboards, premium tournaments.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a14",
+  "theme_color": "#6c5ce7",
+  "icons": [
+    {
+      "src": "/assets/png/bovio-avatar-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/png/bovio-avatar-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

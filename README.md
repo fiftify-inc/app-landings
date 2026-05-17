@@ -14,6 +14,13 @@ app-landings/
 │   ├── index.html
 │   ├── terms.html
 │   └── privacy.html
+├── bovio/                 ← bovio.fiftify.com (Discord bot)
+│   ├── index.html
+│   ├── terms.html
+│   ├── privacy.html
+│   ├── refund.html        ← required for Discord Premium Apps
+│   ├── support.html
+│   └── legal/             ← Markdown source for policy review
 └── ...
 ```
 

@@ -1,0 +1,8 @@
+# Bovio — security contact (RFC 9116)
+# https://bovio.fiftify.com/.well-known/security.txt
+
+Contact: mailto:info@fiftify.com
+Expires: 2027-05-16T00:00:00.000Z
+Preferred-Languages: en, uk
+Canonical: https://bovio.fiftify.com/.well-known/security.txt
+Policy: https://bovio.fiftify.com/terms#section-3

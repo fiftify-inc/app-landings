@@ -1,0 +1,9 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <title>Bovio Discord avatar</title>
+  <rect width="1024" height="1024" rx="232" fill="#6c5ce7"/>
+  <circle cx="512" cy="512" r="400" fill="#ffffff"/>
+  <circle cx="512" cy="512" r="290" fill="#6c5ce7"/>
+  <circle cx="512" cy="512" r="186" fill="#ffffff"/>
+  <circle cx="512" cy="512" r="83" fill="#6c5ce7"/>
+  <circle cx="512" cy="512" r="21" fill="#ffffff"/>
+</svg>
