@@ -38,6 +38,7 @@ Pure HTML + Tailwind CSS (CDN) — no build step, matching the rest of this mono
    bovio.fiftify.com  CNAME  bovio.pages.dev
    ```
 3. SSL is provisioned automatically.
+4. **Add `bovio.fiftify.com` to the zone-wide WAF allow-list** — see [root README](../README.md#waf-allow-list-for-new-subdomains). Otherwise every request returns 403 even though deploy succeeded.
 
 ## Updating legal text
 
@@ -73,7 +74,7 @@ Used in the site:
 The "Add to Discord" CTA points to:
 
 ```
-https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot
+https://discord.com/oauth2/authorize?client_id=1505131522309488730&permissions=395137076288&integration_type=0&scope=bot
 ```
 
 Change `client_id` and `permissions` here and in every `*.html` file if the bot's Discord application ID changes.
