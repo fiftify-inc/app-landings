@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unboxity.fiftify.com/sitemap.xml
