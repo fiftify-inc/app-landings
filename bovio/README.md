@@ -74,7 +74,7 @@ Used in the site:
 The "Add to Discord" CTA points to:
 
 ```
-https://discord.com/oauth2/authorize?client_id=1504760228053258310&permissions=2147502080&integration_type=0&scope=bot
+https://discord.com/oauth2/authorize?client_id=1505131522309488730&permissions=395137076288&integration_type=0&scope=bot
 ```
 
 Change `client_id` and `permissions` here and in every `*.html` file if the bot's Discord application ID changes.
