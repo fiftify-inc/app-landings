@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page not found · Fiftify Mobile</title>
+    <meta name="description" content="That page isn't here. Head back to Fiftify Mobile's home page.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#18181B">
+    <meta name="apple-mobile-web-app-title" content="Fiftify">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD',
+                            400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8',
+                            800: '#1E40AF', 900: '#1E3A8A'
+                        },
+                        dark: {
+                            50: '#FAFAFA', 100: '#F4F4F5', 200: '#E4E4E7', 300: '#D4D4D8',
+                            400: '#A1A1AA', 500: '#71717A', 600: '#52525B', 700: '#3F3F46',
+                            800: '#27272A', 900: '#18181B', 950: '#09090B'
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    </style>
+</head>
+<body class="bg-white text-dark-900 antialiased font-sans min-h-screen flex flex-col">
+
+    <nav class="w-full bg-white/90 backdrop-blur-md border-b border-dark-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" aria-label="Fiftify Mobile home">
+                <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-8">
+                <span class="text-dark-400 font-normal text-lg">Mobile</span>
+            </a>
+            <a href="https://fiftify.com/"
+               target="_blank" rel="noopener"
+               class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">
+                Get Started
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-1 flex items-center bg-gradient-to-b from-dark-50 to-white">
+        <div class="max-w-3xl mx-auto px-4 py-20 md:py-32 text-center">
+            <div class="text-8xl md:text-9xl font-extrabold text-brand-500 leading-none mb-4 tracking-tight">404</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-dark-900 leading-tight mb-5">
+                Page not found.
+            </h1>
+            <p class="text-lg text-dark-500 mb-10 max-w-xl mx-auto">
+                The page you're looking for isn't here. Maybe the URL is off — or the page moved. Head back to the home page or visit fiftify.com.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/"
+                   class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-7 py-3.5 rounded-lg font-bold transition shadow-lg shadow-brand-500/30">
+                    Go home
+                </a>
+                <a href="https://fiftify.com/"
+                   target="_blank" rel="noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-dark-100 hover:bg-dark-200 text-dark-900 px-7 py-3.5 rounded-lg font-semibold transition border border-dark-200">
+                    Visit fiftify.com
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-dark-200 py-8">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-dark-500">
+            <div class="flex items-center gap-2">
+                <img src="assets/fiftify-logo.svg" alt="Fiftify" class="h-6">
+                <span>&copy; 2026 Fiftify Inc.</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/" class="hover:text-brand-500 transition">Home</a>
+                <a href="privacy.html" class="hover:text-brand-500 transition">Privacy</a>
+                <a href="terms.html" class="hover:text-brand-500 transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

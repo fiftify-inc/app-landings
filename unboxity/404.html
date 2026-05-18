@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Lost in the boxes · Unboxity</title>
+    <meta name="description" content="That page isn't here. Head back to Unboxity's home page.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#D97706">
+    <meta name="apple-mobile-web-app-title" content="Unboxity">
+
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="apple-touch-icon" href="assets/logo.svg">
+    <link rel="manifest" href="site.webmanifest">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: {
+                            50: '#FFFBEB', 100: '#FEF3C7', 200: '#FDE68A', 300: '#FCD34D',
+                            400: '#FBBF24', 500: '#F5A623', 600: '#D97706', 700: '#B45309',
+                            800: '#92400E', 900: '#78350F'
+                        },
+                        brown: { 500: '#6D4C2A', 600: '#5C3D1F', 700: '#4A2F15', 800: '#3B2410' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-hero { background: linear-gradient(135deg, #F5A623 0%, #D97706 50%, #92400E 100%); }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased min-h-screen flex flex-col">
+
+    <nav class="w-full bg-white/90 backdrop-blur-md border-b border-amber-100">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2" aria-label="Unboxity home">
+                <span class="text-2xl">📦</span>
+                <span class="text-xl font-bold text-brown-700">Unboxity</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.fiftify.unboxity"
+               target="_blank" rel="noopener"
+               class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-amber-500/30">
+                Get the App
+            </a>
+        </div>
+    </nav>
+
+    <main class="gradient-hero relative overflow-hidden flex-1 flex items-center">
+        <div class="max-w-3xl mx-auto px-4 py-20 md:py-32 text-center relative z-10">
+            <div class="text-8xl md:text-9xl font-extrabold text-white/90 leading-none mb-4 tracking-tight">404</div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5">
+                This box is empty.
+            </h1>
+            <p class="text-lg text-amber-50/90 mb-10 max-w-xl mx-auto">
+                The page you're looking for isn't here. Maybe the URL is off — or the page moved. Go back to the home page to find what you need.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/"
+                   class="inline-flex items-center justify-center gap-2 bg-white hover:bg-amber-50 text-brown-700 px-7 py-3.5 rounded-full font-bold transition shadow-xl">
+                    Go home
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.fiftify.unboxity"
+                   target="_blank" rel="noopener"
+                   class="inline-flex items-center justify-center gap-2 bg-brown-800/30 hover:bg-brown-800/50 text-white px-7 py-3.5 rounded-full font-semibold transition border border-white/30">
+                    Get on Google Play
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-amber-100 py-8">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <span>&copy; 2026 Fiftify Inc.</span>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/" class="hover:text-amber-600 transition">Home</a>
+                <a href="privacy.html" class="hover:text-amber-600 transition">Privacy</a>
+                <a href="terms.html" class="hover:text-amber-600 transition">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

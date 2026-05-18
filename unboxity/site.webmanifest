@@ -1,0 +1,17 @@
+{
+  "name": "Unboxity",
+  "short_name": "Unboxity",
+  "description": "Smart box inventory with AI — photograph contents, identify items, generate QR labels, and find anything instantly.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBEB",
+  "theme_color": "#D97706",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

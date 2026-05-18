@@ -50,3 +50,28 @@ app-landings/
 3. Generate Terms and Privacy with the list of specific technologies used
 4. Push → set up Cloudflare Pages project with `root directory` = folder
 5. Connect custom subdomain
+6. **Add the new subdomain to the WAF allow-list** (see below) — otherwise the zone-wide custom rule will return 403 for all requests
+
+## WAF allow-list for new subdomains
+
+The `fiftify.com` Cloudflare zone has a **WAF Custom Rule** named **"Block unknown hostnames"** that blocks every request whose `Hostname` is not in an explicit allow-list. This protects unused subdomains from being abused (spam DNS, phishing setups, etc.).
+
+**When you add a new subdomain, you MUST add it to this rule's allow-list, or it will return 403 for every request, even after a successful Worker / Pages deploy.**
+
+Where to find it:
+
+1. Cloudflare dashboard → `fiftify.com` zone
+2. Left sidebar: **Security → Security rules** (or *Security → WAF → Custom rules* in older UI)
+3. Open the rule **"Block unknown hostnames"**
+4. Under *Value*, add the new hostname (e.g. `bovio.fiftify.com`) to the chip list
+5. Save
+
+The rule expression looks like:
+
+```
+(not http.host in {"fiftify.com" "www.fiftify.com" "api.fiftify.com" ... "bovio.fiftify.com"})
+```
+
+Action: **Block**. Placed after the rule named `Shevaldin` in the custom-rules order.
+
+**Symptom of forgetting this step:** `curl -I https://<new-subdomain>.fiftify.com/` returns `HTTP/2 403` with `cf-mitigated: block`, even though the Worker/Pages deploy succeeded and the DNS record is correctly proxied.

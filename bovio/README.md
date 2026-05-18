@@ -38,6 +38,7 @@ Pure HTML + Tailwind CSS (CDN) — no build step, matching the rest of this mono
    bovio.fiftify.com  CNAME  bovio.pages.dev
    ```
 3. SSL is provisioned automatically.
+4. **Add `bovio.fiftify.com` to the zone-wide WAF allow-list** — see [root README](../README.md#waf-allow-list-for-new-subdomains). Otherwise every request returns 403 even though deploy succeeded.
 
 ## Updating legal text
 
