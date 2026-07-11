@@ -1,7 +1,14 @@
 {
-  // Cloudflare Pages project config for StatStation.
-  // Deploy: root directory = statstation
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "statstation",
   "compatibility_date": "2026-07-11",
-  "pages_build_output_dir": "."
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "."
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
 }
