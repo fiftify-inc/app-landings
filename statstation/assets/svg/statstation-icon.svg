@@ -1,0 +1,34 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15495B"/>
+      <stop offset="1" stop-color="#0E3242"/>
+    </linearGradient>
+  </defs>
+
+  <!-- app-icon background -->
+  <rect x="0" y="0" width="512" height="512" rx="116" fill="url(#bg)"/>
+
+  <!-- ===== motif: departure board showing stats, at the head of a perspective track ===== -->
+  <!-- header sign -->
+  <rect x="151" y="120" width="210" height="26" rx="13" fill="#F4C542"/>
+
+  <!-- board panel -->
+  <rect x="120" y="158" width="272" height="150" rx="30" fill="#0A2630" stroke="#2A5260" stroke-width="4"/>
+  <line x1="155" y1="286" x2="357" y2="286" stroke="#2C5563" stroke-width="4" stroke-linecap="round"/>
+  <!-- ascending bars -->
+  <rect x="169" y="250" width="30" height="36"  rx="6" fill="#F4C542"/>
+  <rect x="217" y="226" width="30" height="60"  rx="6" fill="#43D6CE"/>
+  <rect x="265" y="200" width="30" height="86"  rx="6" fill="#F4C542"/>
+  <rect x="313" y="174" width="30" height="112" rx="6" fill="#F4C542"/>
+
+  <!-- perspective track receding up into the board -->
+  <line x1="206" y1="314" x2="128" y2="404" stroke="#6FA0AC" stroke-width="7" stroke-linecap="round"/>
+  <line x1="306" y1="314" x2="384" y2="404" stroke="#6FA0AC" stroke-width="7" stroke-linecap="round"/>
+  <line x1="256" y1="314" x2="256" y2="404" stroke="#3C6571" stroke-width="3" stroke-dasharray="8 12"/>
+  <!-- sleepers, larger & brighter toward viewer -->
+  <line x1="191.9" y1="330" x2="320.1" y2="330" stroke="#4E7682" stroke-width="5" stroke-linecap="round"/>
+  <line x1="170.9" y1="354" x2="341.1" y2="354" stroke="#5A828E" stroke-width="6" stroke-linecap="round"/>
+  <line x1="147.5" y1="381" x2="364.5" y2="381" stroke="#6694A0" stroke-width="7" stroke-linecap="round"/>
+  <line x1="128"   y1="404" x2="384"   y2="404" stroke="#7BA7B3" stroke-width="8" stroke-linecap="round"/>
+</svg>
