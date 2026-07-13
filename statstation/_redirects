@@ -1,7 +1,0 @@
-# One-click install shortcuts. permissions=52224 = View Channel + Send Messages + Embed Links +
-# Attach Files — everything the bot checks before it can post a report.
-/invite   https://discord.com/oauth2/authorize?client_id=1514213194749706271&scope=applications.commands%20bot&permissions=52224&integration_type=0   302
-/add      https://discord.com/oauth2/authorize?client_id=1514213194749706271&scope=applications.commands%20bot&permissions=52224&integration_type=0   302
-
-# Support server (was pointing at the OAuth invite, which is a different thing).
-/discord  https://discord.gg/jEEUq8FVv4   302
