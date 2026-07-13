@@ -4,8 +4,8 @@
  * The landings use absolute asset paths (/assets/...), so opening index.html straight from disk
  * loads no CSS or images. Serve the folder as a site root instead:
  *
- *   node scripts/serve.js statstation        → http://localhost:8899
- *   node scripts/serve.js bovio 3000
+ *   node scripts/serve.js bovio              → http://localhost:8899
+ *   node scripts/serve.js unboxity 3000
  *
  * No dependencies — plain Node.
  */
