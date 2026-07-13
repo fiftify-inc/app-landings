@@ -6,8 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Monorepo for Fiftify landing pages — mobile apps (`unboxity`, `fiftify-mobile`) and the `bovio` Discord bot. Each app gets its own folder of static HTML, deployed to **Cloudflare**.
 
-> The StatStation landing used to live here; it moved out to `ts2-fan-tools/landings` (its own brand and domain). Nothing here should reference it.
-
 ## Architecture
 
 - **Zero build step** — static HTML, no bundlers, no frameworks, no npm
